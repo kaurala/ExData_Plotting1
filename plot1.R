@@ -1,6 +1,6 @@
 #reset the work directory
 setwd("E:/coursera/Exploeratory data analysis/assignment/exdata-data-household_power_consumption")
-#change the language
+#change the local language
 Sys.setlocale("LC_TIME", "English")
 #read the data
 install.packages("sqldf")
@@ -14,6 +14,7 @@ png("plot1.png")
 ##plot the histogram
 hist(data$Global_active_power, col = "red", xlab = "Global Active Power(kilowatts)"
      , main = "Global Active Power")
+#closs graphic device
 dev.off()
 
 

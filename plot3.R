@@ -1,6 +1,6 @@
 #reset the work directory
 setwd("E:/coursera/Exploeratory data analysis/assignment/exdata-data-household_power_consumption")
-#change the language
+#change the local language
 Sys.setlocale("LC_TIME", "English")
 #read the data
 install.packages("sqldf")
@@ -14,6 +14,9 @@ data <- read.csv.sql(file = "household_power_consumption.txt",
 png("plot3.png")
 #set global graphics devices
 par("mar" = c(4, 4, 2, 2))
+#change the class of date
+x <- paste(data$Date, data$Time)
+date <- strptime(x, "%d/%m/%Y %H:%M:%S")
 ##plot the graph where x = Sub_metering_1
 plot(date, data$Sub_metering_1, type = "l", col = "black", xlab = "",
      ylab = "Energy sub metering")

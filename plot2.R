@@ -1,6 +1,6 @@
 #reset the work directory
 setwd("E:/coursera/Exploeratory data analysis/assignment/exdata-data-household_power_consumption")
-#change the language
+#change the local language
 Sys.setlocale("LC_TIME", "English")
 #read the data
 install.packages("sqldf")

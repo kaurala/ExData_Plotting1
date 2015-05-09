@@ -14,6 +14,9 @@ data <- read.csv.sql(file = "household_power_consumption.txt",
 png("plot4.png")
 #set global graphics devices
 par(mfrow = c(2, 2), mar = c(4, 4, 2, 2))
+#change the class of date
+x <- paste(data$Date, data$Time)
+date <- strptime(x, "%d/%m/%Y %H:%M:%S")
 ##draw the topleft graph
 plot(date, data$Global_active_power, type = "l", xlab = "",
      ylab = "Global Active Power")
